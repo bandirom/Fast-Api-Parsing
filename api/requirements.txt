@@ -1,5 +1,4 @@
 fastapi
-fastapi_contrib
 aiofiles
 uvicorn
 flake8

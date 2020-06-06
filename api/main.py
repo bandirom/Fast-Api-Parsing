@@ -7,7 +7,7 @@ from packages.db import DB
 
 
 db = DB()
-app = FastAPI(debug=os.environ.get('DEBUG', default=False))
+app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

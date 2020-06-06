@@ -15,11 +15,11 @@ RUN apk add postgresql-dev
 RUN pip install setuptools --upgrade pip
 
 COPY ./requirements.txt .
+COPY ./entrypoint.sh .
 COPY . $HOME
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN flake8 --ignore=E501,F401,F403,E402 .
 
-# EXPOSE 8080
-
-# CMD uvicorn main:app --reload --host 0.0.0.0 --port 8080
+# run entrypoint.sh
+ENTRYPOINT ["/usr/src/api/entrypoint.sh"]

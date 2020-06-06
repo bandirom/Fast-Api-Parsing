@@ -22,6 +22,8 @@ class ProcessingParse(object):
             return requests.get('https://google.com')
         except requests.exceptions.MissingSchema:
             return requests.get('https://google.com')
+        except requests.exceptions:
+            return requests.get('https://google.com')
 
     def get_html(self, url: str) -> str:
         return self.get_url(url).text
