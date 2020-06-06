@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Spd test case</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">SPD-Ukraine test</a>
+                    <a href="/index" class="navbar-brand">Index</a>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            {% block content %}{% endblock %}
+            <hr/>
+            <footer>
+                <p>&copy; bandirom - SPD</p>
+            </footer>
+        </div>
+
+    {% block scripts %}{% endblock %}
+    <script>
+        $(document).ready(function(){
+            {% block jquery %} {% endblock %}
+        })
+    </script>
+    </body>
+</html>

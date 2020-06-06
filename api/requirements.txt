@@ -1,0 +1,16 @@
+fastapi
+fastapi_contrib
+aiofiles
+uvicorn
+flake8
+jinja2
+python-multipart
+lxml
+requests
+bs4
+SQLAlchemy
+psycopg2
+alembic
+databases
+sqlparse
+asyncpg

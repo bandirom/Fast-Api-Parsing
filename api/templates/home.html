@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="form-group">
+        <div class="col-xs-9">
+            <form action="search" onsubmit="return false;">
+                <input class="form-control" type="text" name='q' minlength="2" title="Search" placeholder="Write search tag"><br/>
+                <button class="form-control" >Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <div class="col-xs-9">
+            <div class="list"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block jquery %}
+    $.getScript('{{ url_for('static', path='file.js') }}');
+{% endblock %}
