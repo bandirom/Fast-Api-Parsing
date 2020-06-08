@@ -44,5 +44,7 @@ class DB(object):
         return [dict(result) for result in s]
 
     async def get_context_matched(self, sequence, size: int = 10):
-        query = f"SELECT title, url FROM links  WHERE context  LIKE '% {sequence} %' limit {size};"
+        # query = f"SELECT title, url FROM links  WHERE context  LIKE '% {sequence} %' limit {size};"
+        query = f"SELECT title, url FROM links WHERE lower(context)  " \
+                f"SIMILAR TO '%({sequence})%' LIMIT {size};"
         return await database.fetch_all(query=query)
