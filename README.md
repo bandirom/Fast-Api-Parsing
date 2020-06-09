@@ -5,11 +5,15 @@
     git clone https://github.com/bandirom/Fast-Api-Parsing.git .
     
 ## Build docker
+
     docker-compose up -d --build
 
 ### Server: [localhost:8080](http://localhost:8080)
 
-## Logs: docker-compose logs -f
+## Logs: 
+
+    docker-compose logs -f
+    
 ## Using logs, you can check how many links parsed and how many left
 
 ### Access to DB:
